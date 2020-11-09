@@ -96,7 +96,7 @@ SecondActivity : AppCompatActivity(), Adapter.ItemDeleteClick {
 
     override fun deleteClick(position: Int) {
         alert(R.string.dialogTitle, R.string.dialogMessage, R.string.yes, R.string.no){
-            if (position>=1){
+            if (position>1){
            //adapter.removeItem(position)
             if (adapter.removeItem(position)) {
                 adapter.notifyItemRemoved(position);
