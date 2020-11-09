@@ -1,16 +1,15 @@
 package kg.geektech.kotlin.ui.main
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import kg.geektech.kotlin.ui.second.SecondActivity
 import kg.geektech.kotlin.databinding.ActivityMainBinding
-import kg.geektech.kotlin.ui.extension.toastText
+import kg.geektech.kotlin.ui.extensions.toastText
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.ArrayList
 
 const val KEY_TEXT = "text"
 const val MAIN_ACTIVITY = 0
@@ -21,11 +20,13 @@ class MainActivity : AppCompatActivity() {
     private var list: MutableList<String> = mutableListOf()
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater);
         setContentView(binding.root);
         openActivity();
+
     }
 
     private fun openActivity() {
@@ -42,7 +43,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun showHistory() {
         Log.i("TAG", "showHistory: ")
         binding.showButton.setOnClickListener {
@@ -66,6 +67,10 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+
+
+
 
 
 }

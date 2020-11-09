@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Kotlin</string>
+    <string name="dialogTitle">delete file</string>
+    <string name="dialogMessage">\"are you sure u want to delete this photo\"</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
 </resources>
